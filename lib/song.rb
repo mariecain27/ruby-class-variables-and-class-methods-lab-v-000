@@ -40,7 +40,15 @@ class Song
   end
   
   def artist_count
-    
+        artist_hash = {}
+    @@artists.each do |key|
+      if artist_hash[key]
+        artist_hash[key] += 1
+      else
+        artist_hash[key] = 1
+      end
+    end
+    artist_hash
   end
   
 end
